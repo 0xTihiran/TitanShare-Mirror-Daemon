@@ -1,0 +1,24 @@
+[Unit]
+Description=TitanShare and Mirror Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/titanshare-daemon
+Restart=on-failure
+RestartSec=3
+User=titanshare
+Group=titanshare
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+# Development defaults. The current starter ignores this file.
+bind_address=127.0.0.1
+port=47650
+log_level=info
+# Do not change bind_address to 0.0.0.0 until TLS and pairing are implemented.
